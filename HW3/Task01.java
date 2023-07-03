@@ -15,21 +15,25 @@ public class Task01 {
       numbers.add(rand.nextInt(100));
     }
     // Нужно удалить из него чётные числа
-    Iterator<Integer> iterator = numbers.iterator();
-    while (iterator.hasNext()) {
-      int number = iterator.next();
+    Iterator<Integer> iter = numbers.iterator();
+    while (iter.hasNext()) {
+      int number = iter.next();
       if (number % 2 == 0) {
-        iterator.remove();
+        iter.remove();
       }
     }
     System.out.println("Долой четные числа: " + numbers);
+    // Найти максимальное значение
     System.out.println("Максимальное число: " + Collections.max(numbers));
+    // Найти минимальное значение
     System.out.println("Минимальное число: " + Collections.min(numbers));
+    //Найти среднее значение
     double sum = 0;
-    for (Integer integer : numbers){
-      sum += integer.intValue();
+    for (Integer num : numbers){
+      sum += num.intValue();
     }
     double average = (double)sum / (double)numbers.size();
-    System.out.println("Среднее арифметическое у нас будет: " + average);
+    System.out.print("Среднее число у нас будет: ");
+    System.out.println(Math.round(average* 100.0) / 100.0);
   }
 }
