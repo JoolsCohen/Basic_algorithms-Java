@@ -37,8 +37,6 @@ public class Task01 {
       for (int el : item.getValue()) {
         phones = phones + el + ", ";
       }
-      // Collections.sort(phones, Collections.reverseOrder());
-      // Collections.reverse(phones);
       System.out.printf("%s: %s \n", item.getKey(), phones);
     }
   }
